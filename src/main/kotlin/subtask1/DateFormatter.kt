@@ -11,13 +11,13 @@ class DateFormatter {
     fun toTextDay(day: String, month: String, year: String): String {
 
         val inputString = "$day.$month.$year"
-        var strToDateFormatter = DateTimeFormatter.ofPattern("d.M.uuuu").withResolverStyle(
+        val strToDateFormatter = DateTimeFormatter.ofPattern("d.M.uuuu").withResolverStyle(
             ResolverStyle.STRICT)
 
         return try {
-            var date = LocalDate.parse(inputString, strToDateFormatter)
-            var toStringFormatter = DateTimeFormatter.ofPattern("d MMMM, EEEE", Locale("ru"))
-            var formattedDate = date.format(toStringFormatter)
+            val date = LocalDate.parse(inputString, strToDateFormatter)
+            val toStringFormatter = DateTimeFormatter.ofPattern("d MMMM, EEEE", Locale("ru"))
+            val formattedDate = date.format(toStringFormatter)
             formattedDate
         } catch (e: Exception) {
             "Такого дня не существует";

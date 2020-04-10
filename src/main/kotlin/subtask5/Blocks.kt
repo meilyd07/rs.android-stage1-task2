@@ -23,7 +23,7 @@ class Blocks {
             }
             String :: class -> {
 
-                var concatString: StringBuilder = StringBuilder()
+                val concatString: StringBuilder = StringBuilder()
                 for (item in blockA) {
                     if (item is String) {
                         concatString.append(item)
@@ -47,7 +47,7 @@ class Blocks {
                 }
 
                 if (dateIndex > 0) {
-                    var formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy")
+                    val formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy")
                     (blockA[dateIndex] as LocalDate).format(formatter)
                 } else {
                     null

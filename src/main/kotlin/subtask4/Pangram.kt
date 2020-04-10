@@ -17,7 +17,7 @@ class Pangram {
     }
 
     private fun sortWordsInString(string: String, sortSet: Set<Char>):String {
-        var pairs = mutableListOf<Pair<Int, String>>()
+        val pairs = mutableListOf<Pair<Int, String>>()
         val words = string.split(" ")
 
         for (strItem in words) {
@@ -34,7 +34,7 @@ class Pangram {
     }
 
     private fun countAndCapitalizeCharactersInSet(inputSet: Set<Char>, word: String): Pair<Int, String> {
-        var characters = mutableListOf<Char>()
+        val characters = mutableListOf<Char>()
         var count = 0
         for (i in word.indices) {
             val ichar = word[i]

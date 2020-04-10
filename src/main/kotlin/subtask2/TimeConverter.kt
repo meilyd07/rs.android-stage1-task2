@@ -51,7 +51,6 @@ class TimeConverter {
             } else {
                 return ""
             }
-            return ""
         } else {
             return ""
         }
